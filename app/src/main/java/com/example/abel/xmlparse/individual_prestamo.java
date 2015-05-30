@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 public class individual_prestamo extends Activity {
 
-    static final String KEY_CLAVE = "clave_prestamo"; // parent node
+    //Nodos utilizados en la aplicacion
+    static final String KEY_CLAVE = "clave_prestamo";
     static final String KEY_FECHA = "fecha";
     static final String KEY_NOMBRE = "nombre_sol";
     static final String KEY_AREA = "area_sol";
@@ -23,10 +24,10 @@ public class individual_prestamo extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.individual_prestamo);
 
-        // getting intent data
+        //Obteniendo el Intent
         Intent in = getIntent();
 
-        // Get XML values from previous intent
+        //Variables y su tag respectivo
         String clave_prestamo = in.getStringExtra(KEY_CLAVE);
         String fecha = in.getStringExtra(KEY_FECHA);
         String nombre_sol = in.getStringExtra(KEY_NOMBRE);
@@ -35,7 +36,7 @@ public class individual_prestamo extends Activity {
         String recibido = in.getStringExtra(KEY_RECIBIDO);
         String entregado = in.getStringExtra(KEY_ENTREGADO);
 
-        // Displaying all values on the screen
+        //Variables y sus elementos graficos respectivamente
         TextView clv = (TextView) findViewById(R.id.clave2);
         TextView fec = (TextView) findViewById(R.id.fecha2);
         TextView nom = (TextView) findViewById(R.id.nombre2);
@@ -44,6 +45,7 @@ public class individual_prestamo extends Activity {
         TextView rec = (TextView) findViewById(R.id.recibido2);
         TextView ent = (TextView) findViewById(R.id.entregado2);
 
+        //Mostrar informacion obenida del Intent
         clv.setText(clave_prestamo);
         fec.setText(fecha);
         nom.setText(nombre_sol);
